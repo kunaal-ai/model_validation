@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .passed { color: green; }
+        .failed { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Validation Results</h1>
+    <table>
+        <tr>
+            <th>Test Case</th>
+            <th>Status</th>
+            <th>Details</th>
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td>{{ result.test_case }}</td>
+            <td class="{{ 'passed' if result.status == 'Passed' else 'failed' }}">{{ result.status }}</td>
+            <td>{{ result.details }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

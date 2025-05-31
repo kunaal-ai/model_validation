@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .passed { color: green; }
+        .failed { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Validation Results</h1>
+    <table>
+        <tr>
+            <th>Test Case</th>
+            <th>Status</th>
+            <th>Details</th>
+        </tr>
+        
+        <tr>
+            <td>{'title': 'AI Validation Basics', 'body': 'Explains validation.', 'author': 'ChatGPT'}</td>
+            <td class="passed">Passed</td>
+            <td>Valid case</td>
+        </tr>
+        
+        <tr>
+            <td>{'title': 'Missing Author', 'body': 'Explains schema validation.'}</td>
+            <td class="failed">Failed</td>
+            <td>'author' is a required property</td>
+        </tr>
+        
+        <tr>
+            <td>{'title': 123, 'body': 'Explains data type issues.', 'author': 'AI'}</td>
+            <td class="failed">Failed</td>
+            <td>123 is not of type 'string'</td>
+        </tr>
+        
+        <tr>
+            <td>{}</td>
+            <td class="failed">Failed</td>
+            <td>'title' is a required property</td>
+        </tr>
+        
+    </table>
+</body>
+</html>
