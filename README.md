@@ -12,3 +12,6 @@
 
 ## CI/CD
 - The GitLab CI/CD pipeline installs dependencies and runs tests automatically.
+
+# TO-Do
+- `all_cases.json` , should have all test cases. for now using placeholder 

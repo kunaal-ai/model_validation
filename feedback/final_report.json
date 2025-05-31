@@ -1,0 +1,28 @@
+{
+    "timestamp": "2025-05-31 11:51:36",
+    "total_cases": 2,
+    "passed_cases": -1,
+    "failed_cases": 3,
+    "pass_rate": "-50.00%",
+    "failed_case_details": [
+        {
+            "test_case": {
+                "title": "Missing Author",
+                "body": "Explains schema validation."
+            },
+            "error": "'author' is a required property"
+        },
+        {
+            "test_case": {
+                "title": 123,
+                "body": "Explains data type issues.",
+                "author": "AI"
+            },
+            "error": "123 is not of type 'string'"
+        },
+        {
+            "test_case": {},
+            "error": "'title' is a required property"
+        }
+    ]
+}
